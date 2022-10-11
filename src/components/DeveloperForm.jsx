@@ -6,24 +6,32 @@ import { TextField } from "@material-ui/core";
 import Button from '@material-ui/core/Button';
 
 
+
 const DeveloperForm = ({ dispatch }) => {
   const [name, setName] = useState("  ");
   const [email, setEmail] = useState(" user@example.com ");
-  const [phone, setPhone] = useState(" +962 ");
+  const [username, setUsername] = useState(" Dev. ");
   const [address, setAddress] = useState("  ");
   const [age, setAge] = useState("  ");
 
+/*   const handleValidate = (value) => {
+    const isValid = isValidPhoneNumber(value);
+    console.log({ isValid })
+    return isValid
+  }
+   */
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(!name || !email || !phone || !address || !age) return;
+    if(!name || !email || !username || !address || !age) return;
     dispatch({
       type: actions.addDeveloper,
-      payload: { name, email, phone, address, age },
+      payload: { name, email, username, address, age },
     });
     setName("");
     setEmail(" user@example.com ");
-    setPhone(" +962 ");
+    setUsername(" Dev. ");
     setAddress("");
     setAge("");
   };
@@ -51,15 +59,19 @@ const DeveloperForm = ({ dispatch }) => {
             />
           </div>
         </div>
-        <div className="inputs">
+
+        <div  className="inputs">
           <TextField
-            id="phone"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            label="phone"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            label="username"
             variant="filled"
+            
           />
         </div>
+
+
         <div>
           <TextField
             id="address"

@@ -13,7 +13,7 @@
                         id: state.length + 1,
                         name: action.payload.name,
                         email: action.payload.email,
-                        phone: action.payload.phone,
+                        username: action.payload.username,
                         address: action.payload.address,
                         age: action.payload.age
                     }

@@ -16,7 +16,7 @@ function DeveloperList (props) {
                     <tr>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Phone</th>
+                        <th>Username</th>
                         <th>Address</th>
                         <th>Age</th>
                         <th>Actions</th>
@@ -27,7 +27,7 @@ function DeveloperList (props) {
                         <tr key={dev.id}>
                             <td>{dev.name}</td>
                             <td>{dev.email}</td>  
-                            <td>{dev.phone}</td>
+                            <td>{dev.username}</td>
                             <td>{dev.address}</td>
                             <td>{dev.age}</td>
                             <td className="delete-btn">

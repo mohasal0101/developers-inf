@@ -12,14 +12,15 @@ function App() {
   const [devOps, dispatch] = useReducer (Developer, []);
 
   return (
-    <>
-      <div className="App" style={{ margin: "3% 4%" }}>
+    
+    
+      <div className="App" style={{ margin: "3% 4%", backgroundColor: "#cac9c9" }}>
         <Navbar bg="dark" variant="dark" />
-        <DeveloperForm dispatch={ dispatch } />
+        <DeveloperForm  dispatch={ dispatch } />
         <DeveloperList dispatch={ dispatch } devOps={devOps} />
         
       </div>
-    </>
+    
   );
 }
 
